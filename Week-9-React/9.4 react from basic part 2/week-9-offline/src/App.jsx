@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './App.css'
 import { PostComponent } from "./post";
 
@@ -100,7 +100,11 @@ export default App
   
 */
 
+
+
 //            ********** CARD COMPONENT **********
+
+
 
 /*
 
@@ -142,3 +146,66 @@ export default App;
 //         PART 8 # LISTS & ARRAYS   
 //  ********** CARD COMPONENT **********
 
+
+
+/*
+function App() {
+  const inputRef = useRef();
+
+  function focusOnInput() {
+    // document.getElementById("name").focus()
+    inputRef.current.focus();
+  }
+
+  return <div>
+    Sign up <br /> <br />
+    <input ref={inputRef} id="name" type={"text"}></input> <br />
+    <br />
+    <input type={"text"}></input> <br />
+     <br />
+    <button onClick={focusOnInput}>Submit</button>
+  </div>
+}
+
+export default App
+*/
+
+
+
+//         PART 8 # = useRef
+//  ********** Building A Clock **********
+
+
+
+function Stopwatch() {
+  const [time, setTime] = useState(0);
+  const [intervalId, setIntervalId] = useState(null); // Use state to store the interval ID
+
+  const startTimer = () => {
+    if (intervalId !== null) return; // Already running, do nothing
+
+    const newIntervalId = setInterval(() => {
+      setTime((prevTime) => prevTime + 1);
+    }, 1000);
+    
+    // Store the interval ID in state (triggers re-render)
+    setIntervalId(newIntervalId);
+  };
+
+  const stopTimer = () => {
+    clearInterval(intervalId);
+
+    // Clear the interval ID in state (triggers re-render)
+    setIntervalId(null);
+  };
+
+  return (
+    <div>
+      <h1>Timer: {time}</h1>
+      <button onClick={startTimer}>Start</button>
+      <button onClick={stopTimer}>Stop</button>
+    </div>
+  );
+}
+
+export default Stopwatch;
