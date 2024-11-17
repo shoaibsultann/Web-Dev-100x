@@ -1,4 +1,4 @@
-# Easy Explanation of this APP
+# Easy Explanation of this APP.
 
 This code implements a simple React application to manage and display a counter value. However, it is labeled as **"bad code"** because it doesn't use the most efficient or clean design practices. Let’s go through the code step by step:
 
