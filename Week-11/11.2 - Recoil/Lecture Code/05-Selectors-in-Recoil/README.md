@@ -1,4 +1,7 @@
-# Easy Explanation
+# Task
+<img width="1730" alt="Screenshot 2024-10-19 at 7 19 34 PM" src="https://github.com/user-attachments/assets/7387d8b2-d48f-43d8-9762-9492ed446bd7">
+
+# Easy Explanation of Selector in Recoil
 In Recoil, a **selector** is a derived piece of state that allows you to compute or transform state based on the value of atoms (or other selectors). Think of a selector as a "read-and-write" function that provides logic to derive data or manipulate the underlying state.
 
 ---
