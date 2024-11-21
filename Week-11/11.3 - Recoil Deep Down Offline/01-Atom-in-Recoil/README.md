@@ -1,6 +1,6 @@
 # Recoil and it's Hooks
 
-### useRecoilValue
+## useRecoilValue
 
 The `useRecoilValue` hook is a **Recoil utility** used to **read the current value** of a Recoil atom or selector in a React component. It ensures that the component re-renders whenever the atom or selector's value changes.
 
@@ -25,7 +25,7 @@ function Counter() {
 }
 ```
 
-### useRecoilState
+## useRecoilState
 
 The `useRecoilState` hook is a **Recoil utility** that provides both the **current value** and a **setter function** for a Recoil atom or writable selector. It allows you to read and update the state in a single hook.
 
@@ -55,7 +55,7 @@ function CounterControls() {
 }
 ```
 
-### useSetRecoilState
+## useSetRecoilState
 
 The `useSetRecoilState` hook is a **Recoil utility** that provides a **setter function** to update the value of a Recoil atom or writable selector. It is used when you only need to modify the state and don’t need to read it.
 
