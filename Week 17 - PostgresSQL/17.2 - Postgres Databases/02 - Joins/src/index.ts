@@ -2,7 +2,6 @@ import express from "express"; // Import Express framework
 import { Client } from "pg"; // Import PostgreSQL client for database interaction
 
 const app = express(); // Create an Express application
-
 app.use(express.json()); // Middleware to parse JSON payloads from incoming requests
 
 // Async function to fetch user data and their address together
